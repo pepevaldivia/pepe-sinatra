@@ -1,0 +1,26 @@
+.sugerencia-contenedor{
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    padding-top: 2px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #cccccc;
+    z-index: 20;
+}
+
+.fila-sugerencia{
+}
+
+.sugerencia-label{
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+.sugerencia-label:hover{
+    color:#dd4814;
+}
+
+.oculto{
+  display: none;
+}

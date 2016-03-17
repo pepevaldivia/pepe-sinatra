@@ -24,6 +24,14 @@ module App
       erb :index
     end
 
+    post '/distrito' do
+        puts "1 +++++++++++++++++++++++++++++++++++"
+        nombre = params['distrito']
+        distrito = Distrito.new
+        distrito.autocompletar(nombre)
+        puts "2 +++++++++++++++++++++++++++++++++++"
+    end
+
     #helpers
     helpers do
       def partial(file_name)
