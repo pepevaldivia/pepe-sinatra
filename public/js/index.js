@@ -1,4 +1,4 @@
-var BASE_URL = "http://127.0.0.1:9393/";
+var BASE_URL = "http://pepis-sinatra.mybluemix.net/";
 
 $("#txtDistrito").pepeautocomplete({
 	url : BASE_URL+"distrito",
