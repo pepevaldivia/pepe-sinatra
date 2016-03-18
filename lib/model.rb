@@ -11,6 +11,10 @@ class Database
 	def get_connection
 		@connection
 	end
+
+	def close_connection
+		@connection.close
+	end
 end
 
 # +++++++++++++++++++++++++++++++++++++++++
@@ -30,6 +34,7 @@ class Model
 		  	array_json << JSON[row]
 		end 
 		#array_json.to_json
+		@db.close_connection
 		array_json.to_json
 	end
 end
@@ -41,8 +46,9 @@ class Distritos
 		@model = Model.new
 	end
 
-	def lista(nombre)
-		@model.query("SELECT id,nombre FROM vw_tb_personal_id_nombre WHERE nombre LIKE CONCAT(" + nombre + " ,'%') LIMIT 0,10;")
+	def listar(nombre)
+		#puts "SELECT id,nombre FROM vw_distrito_provincia_departamento WHERE nombre LIKE '" + nombre + "%' LIMIT 0,10;"
+		@model.query( "SELECT id,nombre FROM vw_distrito_provincia_departamento WHERE nombre LIKE '" + nombre + "%' LIMIT 0,10;")
 	end
 end
 
@@ -54,7 +60,6 @@ class Distrito
 
 	def autocompletar(nombre)
 		rpta_json = @departamentos.listar(nombre)
-		#puts rpta_json
 		#JSON[rpta_json].to_json
 		rpta_json
 	end

@@ -25,11 +25,12 @@ module App
     end
 
     post '/distrito' do
-        puts "1 +++++++++++++++++++++++++++++++++++"
         nombre = params['distrito']
+        nombre = JSON.parse(nombre)
+        nombre = nombre['textoBuscar']
+
         distrito = Distrito.new
         distrito.autocompletar(nombre)
-        puts "2 +++++++++++++++++++++++++++++++++++"
     end
 
     #helpers
