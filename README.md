@@ -1,23 +1,9 @@
-#ratpack
+# pepe-sinatra
 
-a simple boilerplate for creating production-ready sinatra apps that use activerecord and sqlite
+### Aplicación en Ruby Sinatra que se conecta con una base de datos ClearDB en la nube.
 
-twitterbootstrap using html and css are included.
+Cada vez que se escriba un distrito del Perú en el cuadro de texto de la apliación, se hará una consulta via AJAX a la aplicación la cuál consultará a la base de datos de ClearDB las coincidencias y las mostrará por medio de un autocompletar. Una vez que se haga click en una de las opciones del autocompletar, esta será cargada en el cuadro de texto.
 
-if ya want haml and sass, be on the look for classy.
+Se usó de scaffolding la aplicación en Sinatra de la siguiente fuente:
 
-## Up and running
-1. `bundle install`
-2. `shotgun`
-3. visit `localhost:9393`
-
-## Gemfile
-- [sinatra](http://www.sinatrarb.com/): web framework
-- [sqlite3](https://github.com/luislavena/sqlite3-ruby): Database
-- [activerecord](http://guides.rubyonrails.org/active_record_querying.html): ORM
-- [sinatra-activerecord](https://github.com/bmizerany/sinatra-activerecord)
-- [rake](http://rake.rubyforge.org/)
-
-### Development
-   * [shotgun](https://github.com/rtomayko/shotgun)
-   * [tux](http://tagaholic.me/2011/04/10/tux-a-sinatra-console.html)
+   https://github.com/rtomayko/shotgun
