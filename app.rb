@@ -32,6 +32,15 @@ module App
         distrito = Distrito.new
         distrito.autocompletar(nombre)
     end
+    
+    get '/distrito' do
+        nombre = params['distrito']
+        nombre = JSON.parse(nombre)
+        nombre = nombre['textoBuscar']
+
+        distrito = Distrito.new
+        distrito.autocompletar(nombre)
+    end
 
     #helpers
     helpers do
