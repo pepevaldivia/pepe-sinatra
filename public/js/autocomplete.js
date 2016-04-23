@@ -11,7 +11,8 @@ $(this).keydown(function(k){
     //console.log(data);
     $.ajax({
         type: "POST",
-        url: parametros['url'] + "?distrito=" + JSON.stringify(data) ,
+        //url: parametros['url'] + "?distrito=" + JSON.stringify(data) ,
+        url: parametros['url'] + "?distrito=" + JSON.stringify($(this).text()) ,
         data:"",
         async: false,
         success: function(data) {
