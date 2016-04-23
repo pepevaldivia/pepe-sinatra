@@ -27,7 +27,7 @@ module App
     post '/distrito' do
         nombre = params['distrito']
         nombre = JSON.parse(nombre)
-        nombre = nombre['textoBuscar']
+        #nombre = nombre['textoBuscar']
 
         distrito = Distrito.new
         distrito.autocompletar(nombre)
@@ -36,7 +36,7 @@ module App
     get '/distrito' do
         nombre = params['distrito']
         nombre = JSON.parse(nombre)
-        nombre = nombre['textoBuscar']
+        #nombre = nombre['textoBuscar']
 
         distrito = Distrito.new
         distrito.autocompletar(nombre)
