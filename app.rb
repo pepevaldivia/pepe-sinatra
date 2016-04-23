@@ -35,7 +35,7 @@ module App
     
     get '/distrito' do
         nombre = params['distrito']
-        nombre = JSON.parse(nombre)
+        #nombre = JSON.parse(nombre)
         #nombre = nombre['textoBuscar']
 
         distrito = Distrito.new
