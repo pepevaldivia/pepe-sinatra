@@ -12,7 +12,7 @@ $(this).keydown(function(k){
     $.ajax({
         type: "POST",
         //url: parametros['url'] + "?distrito=" + JSON.stringify(data) ,
-        url: parametros['url'] + "?distrito=" + JSON.stringify($(this).text()) ,
+        url: parametros['url'] + "?distrito=" + $(this).text() ,
         data:"",
         async: false,
         success: function(data) {
